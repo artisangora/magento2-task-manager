@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Artisangora\Task\Api\Data\TaskInterface" type="Artisangora\Task\Model\Task"/>
+    <preference for="Artisangora\Task\Api\Data\TaskSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+    <preference for="Artisangora\Task\Api\TaskRepositoryInterface" type="Artisangora\Task\Model\TaskRepository"/>
+</config>
