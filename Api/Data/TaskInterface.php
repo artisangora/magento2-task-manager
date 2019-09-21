@@ -14,6 +14,12 @@ interface TaskInterface
      */
     public function getId();
 
+    /**
+     * @param $value
+     *
+     * @return TaskInterface
+     */
+    public function setId($value);
 
     /**
      * @return string

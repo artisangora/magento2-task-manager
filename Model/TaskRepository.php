@@ -95,7 +95,7 @@ class TaskRepository implements TaskRepositoryInterface
      */
     public function deleteById(int $id)
     {
-        return $this->delete($this->get($id));
+        return $this->delete($this->getById($id));
     }
 
     /**

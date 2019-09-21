@@ -48,7 +48,7 @@ class Task extends AbstractModel implements TaskInterface
      */
     public function setContent(string $content): TaskInterface
     {
-        $this->setData(self::TITLE, $content);
+        $this->setData(self::CONTENT, $content);
         return $this;
     }
 
