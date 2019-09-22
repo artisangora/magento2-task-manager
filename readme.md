@@ -1,4 +1,4 @@
-# Magento 2 Simple Module
+# Magento 2 Task Manager
 
 ### The basic functionality:
 * Create a task
@@ -16,5 +16,3 @@
 
 1. API [`/swagger`]  
 ![Swagger Docs](http://dl3.joxi.net/drive/2019/09/22/0022/1240/1463512/12/c0def91484.jpg)
-
- 
