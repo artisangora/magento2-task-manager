@@ -9,12 +9,12 @@
 
 
 ### Routing:
-Admin [`/admin_*/task`]   
+1. Admin [`/admin_*/task`]   
 ![Admin Panel](http://dl3.joxi.net/drive/2019/09/22/0022/1240/1463512/12/e3d0355e19.jpg)
 
-Frontend (Client side) [`/task`]  
+1. Frontend (Client side) [`/task`]  
 
-API [`/swagger`]  
+1. API [`/swagger`]  
 ![Swagger Docs](http://dl3.joxi.net/drive/2019/09/22/0022/1240/1463512/12/c0def91484.jpg)
 
  
