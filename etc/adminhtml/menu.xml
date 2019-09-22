@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Artisangora_Task::task" title="Task Manager" module="Artisangora_Task" sortOrder="10" resource="Artisangora_Task::task"/>
+        <add id="Artisangora_Task::management" title="Task Manager" module="Artisangora_Task" sortOrder="20" parent="Artisangora_Task::task" action="task" resource="Artisangora_Task::management"/>
+    </menu>
+</config>

@@ -8,5 +8,5 @@ use Magento\Framework\Api\Search\SearchResult;
 
 class TaskSearchResult extends SearchResult implements TaskSearchResultsInterface
 {
-
+    //
 }

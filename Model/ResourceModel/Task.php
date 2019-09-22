@@ -9,6 +9,7 @@ use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
 class Task extends AbstractDb
 {
+    protected $_idFieldName = TaskInterface::ENTITY_ID;
 
     /**
      * Resource initialization
