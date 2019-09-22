@@ -2,15 +2,13 @@
     "name": "artisangora/task",
     "authors": [
         {
-            "name": "Georgiy Baranov",
-            "email": "gebar.personal@gmail.com"
+            "name": "Georgiy Baranov"
         }
     ],
     "type": "magento2-module",
     "version": "1.0.0",
-    "require": {
-        "magento/community-edition": "^2.3.2"
-    },
+    "license": "GPL-3.0",
+    "require": { },
     "autoload": {
         "files": [
             "registration.php"
