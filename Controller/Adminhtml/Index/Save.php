@@ -54,7 +54,9 @@ class Save extends Action
             return $resultRedirect->setPath('*/*/');
         }
 
-        $task = $this->taskFactory->create($data);
+        $task = $this->taskFactory->create();
+        $task->setTitle($data['title']);
+        $task->setContent($data['content']);
         $this->taskRepository->save($task);
         $this->messageManager->addSuccessMessage(__('Task was created'));
 
