@@ -1,5 +1,8 @@
 # Magento 2 Task Manager
 
+`composer require artisangora/task`
+
+
 ### The basic functionality:
 * Create a task
 * Read a task
