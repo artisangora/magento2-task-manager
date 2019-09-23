@@ -8,6 +8,9 @@ use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
 
+/**
+ * @deprecated Need to do https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html
+ */
 class InstallSchema implements InstallSchemaInterface
 {
 

@@ -13,12 +13,6 @@ use Magento\Framework\Exception\StateException;
 
 class TaskRepository implements TaskRepositoryInterface
 {
-
-    /**
-     * @var array
-     */
-    private $registry = [];
-
     /**
      * @var TaskFactory
      */
@@ -75,16 +69,16 @@ class TaskRepository implements TaskRepositoryInterface
      *
      * @return TaskInterface
      * @throws StateException
+     * @throws NoSuchEntityException
      */
     public function save(TaskInterface $task)
     {
         try {
             $this->taskResource->save($task);
-            $this->registry[$task->getId()] = $this->getById($task->getId());
         } catch (\Exception $exception) {
             throw new StateException(__('Unable to save task #%1', $task->getId()));
         }
-        return $this->registry[$task->getId()];
+        return $this->getById($task->getId());
     }
 
     /**
@@ -92,6 +86,7 @@ class TaskRepository implements TaskRepositoryInterface
      *
      * @return bool
      * @throws StateException
+     * @throws NoSuchEntityException
      */
     public function deleteById(int $id)
     {
@@ -106,16 +101,13 @@ class TaskRepository implements TaskRepositoryInterface
      */
     public function getById($id)
     {
-        if (!array_key_exists($id, $this->registry)) {
-            $task = $this->taskFactory->create();
-            $this->taskResource->load($task, $id);
-            if (!$task->getId()) {
-                throw new NoSuchEntityException(__('Requested task does not exist'));
-            }
-            $this->registry[$id] = $task;
+        $task = $this->taskFactory->create();
+        $this->taskResource->load($task, $id);
+        if (!$task->getId()) {
+            throw new NoSuchEntityException(__('Requested task does not exist'));
         }
 
-        return $this->registry[$id];
+        return $task;
     }
 
     /**
@@ -128,7 +120,6 @@ class TaskRepository implements TaskRepositoryInterface
     {
         try {
             $this->taskResource->delete($task);
-            unset($this->registry[$task->getId()]);
         } catch (\Exception $e) {
             throw new StateException(__('Unable to remove task #%1', $task->getId()));
         }

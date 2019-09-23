@@ -57,6 +57,7 @@ class Save extends Action
         $task = $this->taskFactory->create();
         $task->setTitle($data['title']);
         $task->setContent($data['content']);
+        //TODO: Catch possible exceptions
         $this->taskRepository->save($task);
         $this->messageManager->addSuccessMessage(__('Task was created'));
 

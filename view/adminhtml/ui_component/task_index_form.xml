@@ -12,6 +12,7 @@
         </item>
         <item name="template" xsi:type="string">templates/form/collapsible</item>
         <item name="buttons" xsi:type="array">
+            <!-- TODO: Need to do ui-component notation instead blocks-->
             <item name="save" xsi:type="string">Artisangora\Task\Block\Adminhtml\Index\SaveButton</item>
         </item>
     </argument>
